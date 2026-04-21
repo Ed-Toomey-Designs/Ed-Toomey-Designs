@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shopping Cart | Ed Toomey Designs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Newsreader:ital,wght@0,300;0,400;0,500;1,400&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#ffdbcc",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "surface-container-high": "#e6e8ea",
+                        "outline-variant": "#d8c2b9",
+                        "on-primary-fixed": "#351000",
+                        "inverse-primary": "#ffb693",
+                        "primary": "#874d30",
+                        "surface-container": "#eceef0",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#d5e3fc",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary-fixed": "#d8e3fb",
+                        "secondary-fixed": "#d5e3fc",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#3c475a",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-container": "#57657a",
+                        "on-error-container": "#93000a",
+                        "surface": "#f7f9fb",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "tertiary-fixed-dim": "#bcc7de",
+                        "surface-bright": "#f7f9fb",
+                        "on-primary-fixed-variant": "#6d381d",
+                        "surface-tint": "#8a4f32",
+                        "primary-fixed-dim": "#ffb693",
+                        "primary-container": "#a46546",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d8dadc",
+                        "secondary": "#515f74",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary-container": "#fffbff",
+                        "tertiary-container": "#6a758a",
+                        "on-tertiary-fixed": "#111c2d",
+                        "on-surface": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#fefcff",
+                        "on-surface-variant": "#53443d",
+                        "on-background": "#191c1e",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "background": "#f7f9fb",
+                        "tertiary": "#515c71",
+                        "outline": "#85736c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Newsreader', serif;
+            background-color: #f7f9fb;
+            color: #191c1e;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .font-label {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto w-full">
+<div class="text-xl font-bold font-['Space_Grotesk'] uppercase tracking-tighter text-slate-900 dark:text-slate-50">
+                Ed Toomey Designs
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-['Space_Grotesk'] uppercase text-xs tracking-widest text-[#874d30] dark:text-[#a46546] border-b-2 border-[#874d30] pb-1" href="#">Shop</a>
+<a class="font-['Space_Grotesk'] uppercase text-xs tracking-widest text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors" href="#">Services</a>
+<a class="font-['Space_Grotesk'] uppercase text-xs tracking-widest text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors" href="#">Account</a>
+</div>
+<div class="flex items-center space-x-5">
+<button class="text-slate-600 hover:text-[#874d30] transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="text-slate-600 hover:text-[#874d30] transition-colors scale-95 active:scale-90">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24 px-6 max-w-screen-2xl mx-auto w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Shopping Cart List -->
+<div class="lg:col-span-8">
+<header class="mb-12">
+<span class="font-label uppercase text-[10px] tracking-[0.2em] text-primary mb-2 block">Checkout Journey</span>
+<h1 class="text-5xl font-headline font-bold tracking-tight text-on-surface">Your Assembly</h1>
+</header>
+<div class="space-y-8">
+<!-- Item 1 -->
+<div class="group bg-surface-container-low p-6 flex flex-col md:flex-row gap-8 transition-all hover:bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-0.5 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+<div class="w-full md:w-48 h-48 bg-surface-container-highest overflow-hidden aspect-square">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="industrial grade precision cut steel manifold for automotive exhaust systems close-up in workshop lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6aVjbFZQZSEP8jao0rM1F_06vId8iWxyKkp9g4tyqg7CbHcysOQv4H0PWwSMlFRwJ5C_JwOe7FgzHB5jZiacfjsu1g2NCfoJmn7l-2pHrgdJ8QOt3ekekNxzN12mqCHZ-Sh-0WqoN3uuPPx_Rm9pOUP760lIoj2l2ue1bE5A5QlHDoipovayoKDfJYFyR63YVQkdHfSzjUV9TQUB7NK2bgjKH8bnUtxeTZS_GFRLX2Q3WTsTIdqVvoKMHTxpx1GUMHHPjmxau8A"/>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-headline font-bold">V8 High-Flow Manifold</h3>
+<p class="text-xl font-headline font-medium">$1,240.00</p>
+</div>
+<p class="text-on-surface-variant font-body italic mb-4 max-w-md">Precision-welded 304 stainless steel with mandrel-bent tubes for optimal exhaust scavenging.</p>
+<div class="flex items-center space-x-6 text-[10px] font-label uppercase tracking-widest text-slate-500">
+<span>Material: Stainless 304</span>
+<span>Ref: ETD-882-V</span>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex items-center bg-surface-container-highest">
+<button class="p-2 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-4 font-headline font-bold">01</span>
+<button class="p-2 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-slate-400 hover:text-error transition-colors flex items-center space-x-1 group/remove">
+<span class="material-symbols-outlined text-lg">delete</span>
+<span class="font-label uppercase text-[9px] tracking-widest opacity-0 group-hover/remove:opacity-100 transition-opacity">Remove</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group bg-surface-container-low p-6 flex flex-col md:flex-row gap-8 transition-all hover:bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-0.5 bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+<div class="w-full md:w-48 h-48 bg-surface-container-highest overflow-hidden aspect-square">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="custom fabricated aluminum suspension control arm with a metallic sheen on a clean workbench" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoerPLEtJqD5YER8yPx4tVEqt8B93KoftJ86GmlLzyvzpLkc7j-HbNRAFZyHfKTJjqwYahevfX0EbRIvUyTM8Jy5pZtNe8u1XvLh-ZgG5rceJzsC8UjIrvjAngJgePi457vGNz8g7CG3iVA5OzTetpV1JRQIy3pwqcvqPqxZ9MWxHtYyIPHsDNIjCtbUyPXfQpvTnczpmIqfn-TuhGi-tQ_oEEDFQPVK35znfBcWc1SQEmOGMFBfEvlWKFxZuUZZ6krehLG9_Dbw"/>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-headline font-bold">Billet Control Arms</h3>
+<p class="text-xl font-headline font-medium">$850.00</p>
+</div>
+<p class="text-on-surface-variant font-body italic mb-4 max-w-md">CNC-machined 6061-T6 aluminum arms with adjustable heim joints for precision geometry.</p>
+<div class="flex items-center space-x-6 text-[10px] font-label uppercase tracking-widest text-slate-500">
+<span>Process: CNC Machined</span>
+<span>Ref: ETD-S42-C</span>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between">
+<div class="flex items-center bg-surface-container-highest">
+<button class="p-2 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-4 font-headline font-bold">02</span>
+<button class="p-2 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-slate-400 hover:text-error transition-colors flex items-center space-x-1 group/remove">
+<span class="material-symbols-outlined text-lg">delete</span>
+<span class="font-label uppercase text-[9px] tracking-widest opacity-0 group-hover/remove:opacity-100 transition-opacity">Remove</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Shipping Estimates -->
+<div class="mt-12 p-8 border-t border-surface-container-highest flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary scale-125">local_shipping</span>
+<div>
+<p class="font-headline font-bold uppercase text-xs tracking-wider">Fabrication Timeline</p>
+<p class="text-on-surface-variant text-sm">Estimated delivery: 14-21 business days</p>
+</div>
+</div>
+<div class="flex space-x-8">
+<div class="flex items-center space-x-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
+<span class="material-symbols-outlined">security</span>
+<span class="font-label uppercase text-[9px] tracking-widest">Secure Checkout</span>
+</div>
+<div class="flex items-center space-x-2 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-label uppercase text-[9px] tracking-widest">Quality Guaranteed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Summary Sidebar -->
+<div class="lg:col-span-4">
+<div class="bg-surface-container-low p-8 sticky top-32">
+<h2 class="text-3xl font-headline font-bold tracking-tight mb-8">Summary</h2>
+<div class="space-y-4 font-label text-sm uppercase tracking-widest">
+<div class="flex justify-between">
+<span class="text-slate-500">Subtotal</span>
+<span class="text-on-surface font-semibold">$2,940.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-500">Shipping (Freight)</span>
+<span class="text-on-surface font-semibold">$125.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-slate-500">Taxes (Estimated)</span>
+<span class="text-on-surface font-semibold">$235.20</span>
+</div>
+</div>
+<div class="my-8 h-px bg-surface-container-highest"></div>
+<div class="flex justify-between items-baseline mb-10">
+<span class="font-headline font-bold text-xl uppercase tracking-tighter">Total</span>
+<span class="font-headline font-bold text-4xl text-primary">$3,300.20</span>
+</div>
+<div class="space-y-4">
+<button class="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-white font-headline font-bold uppercase tracking-[0.2em] text-xs hover:shadow-lg transition-all active:scale-[0.98]">
+                            Proceed to Checkout
+                        </button>
+<button class="w-full py-5 border border-outline-variant/30 font-headline font-bold uppercase tracking-[0.2em] text-xs hover:bg-surface-container-highest transition-all">
+                            Request Custom Quote
+                        </button>
+</div>
+<!-- Trust Section -->
+<div class="mt-12 pt-8 border-t border-surface-container-highest">
+<p class="font-label uppercase text-[9px] tracking-widest text-slate-400 mb-6 text-center">Industrial Partners</p>
+<div class="grid grid-cols-3 gap-6 items-center opacity-30 grayscale">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-3xl">box</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-3xl">handyman</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-slate-100 dark:bg-slate-950">
+<div class="bg-slate-200 dark:bg-slate-800 h-px w-full"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-['Space_Grotesk'] font-black uppercase text-slate-800 dark:text-slate-200 text-xl mb-6">
+                    ET Designs
+                </div>
+<p class="font-['Newsreader'] italic text-slate-600 dark:text-slate-400">
+                    Dedicated to the pursuit of mechanical perfection and architectural integrity in every part.
+                </p>
+</div>
+<div class="space-y-4">
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-[#874d30] dark:text-[#a46546]">Components</span>
+<nav class="flex flex-col space-y-2">
+<a class="font-['Newsreader'] italic text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Exhaust Systems</a>
+<a class="font-['Newsreader'] italic text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Chassis Components</a>
+<a class="font-['Newsreader'] italic text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Engine Parts</a>
+</nav>
+</div>
+<div class="space-y-4">
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-[#874d30] dark:text-[#a46546]">Logistics</span>
+<nav class="flex flex-col space-y-2">
+<a class="font-['Newsreader'] italic text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Braking</a>
+<a class="font-['Newsreader'] italic text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Shipping &amp; Returns</a>
+<a class="font-['Newsreader'] italic text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200 opacity-80 hover:opacity-100" href="#">Contact</a>
+</nav>
+</div>
+<div class="space-y-6">
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-[#874d30] dark:text-[#a46546]">Archive</span>
+<p class="font-['Newsreader'] italic text-xs text-slate-500">Subscribe to our technical bulletin for precision updates and inventory releases.</p>
+<div class="flex border-b border-slate-300 dark:border-slate-700 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-sm italic w-full" placeholder="blueprint@email.com" type="email"/>
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="px-8 pb-12 max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center text-[10px] font-['Space_Grotesk'] uppercase tracking-[0.2em] text-slate-400">
+<span>© 2024 Ed Toomey Designs. Precision in every component.</span>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+</div>
+</div>
+</footer>
+</body></html>
