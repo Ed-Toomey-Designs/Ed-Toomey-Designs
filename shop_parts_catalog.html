@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shop | Ed Toomey Designs - Precision Motorsport Parts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Newsreader:ital,wght@0,400;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#ffdbcc",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "surface-container-high": "#e6e8ea",
+                        "outline-variant": "#d8c2b9",
+                        "on-primary-fixed": "#351000",
+                        "inverse-primary": "#ffb693",
+                        "primary": "#874d30",
+                        "surface-container": "#eceef0",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#d5e3fc",
+                        "surface-variant": "#e0e3e5",
+                        "tertiary-fixed": "#d8e3fb",
+                        "secondary-fixed": "#d5e3fc",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#3c475a",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary-container": "#57657a",
+                        "on-error-container": "#93000a",
+                        "surface": "#f7f9fb",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "tertiary-fixed-dim": "#bcc7de",
+                        "surface-bright": "#f7f9fb",
+                        "on-primary-fixed-variant": "#6d381d",
+                        "surface-tint": "#8a4f32",
+                        "primary-fixed-dim": "#ffb693",
+                        "primary-container": "#a46546",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#d8dadc",
+                        "secondary": "#515f74",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary-container": "#fffbff",
+                        "tertiary-container": "#6a758a",
+                        "on-tertiary-fixed": "#111c2d",
+                        "on-surface": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#fefcff",
+                        "on-surface-variant": "#53443d",
+                        "on-background": "#191c1e",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "background": "#f7f9fb",
+                        "tertiary": "#515c71",
+                        "outline": "#85736c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Newsreader', serif; }
+        h1, h2, h3, h4, .headline { font-family: 'Space Grotesk', sans-serif; }
+        .label-text { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto w-full">
+<div class="flex items-center gap-8">
+<a class="text-xl font-bold font-['Space_Grotesk'] uppercase tracking-tighter text-slate-900 dark:text-slate-50" href="#">Ed Toomey Designs</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-['Space_Grotesk'] uppercase text-xs tracking-widest text-[#874d30] dark:text-[#a46546] border-b-2 border-[#874d30] pb-1" href="#">Shop</a>
+<a class="font-['Space_Grotesk'] uppercase text-xs tracking-widest text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors" href="#">Services</a>
+<a class="font-['Space_Grotesk'] uppercase text-xs tracking-widest text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors" href="#">Account</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all duration-300 rounded-full scale-95 active:scale-90">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">shopping_cart</span>
+</button>
+<button class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-all duration-300 rounded-full scale-95 active:scale-90">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-400">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-16">
+<!-- Hero Search / Filter Bar -->
+<section class="bg-surface-container-low px-6 py-12">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-8">
+<span class="label-text uppercase text-[10px] tracking-[0.2em] text-primary font-bold">Garage Search</span>
+<h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mt-2 text-on-surface">Find Parts For Your Bike</h1>
+</div>
+<!-- Bento-style Filter Bar -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4 bg-surface-container-lowest p-2 shadow-sm rounded-lg">
+<div class="flex flex-col px-4 py-2">
+<label class="label-text text-[10px] uppercase tracking-widest text-secondary font-bold mb-1">Year</label>
+<select class="bg-transparent border-none focus:ring-0 font-headline font-bold text-lg p-0 cursor-pointer">
+<option>2024</option>
+<option>2023</option>
+<option>2022</option>
+</select>
+</div>
+<div class="flex flex-col px-4 py-2 border-l border-surface-variant">
+<label class="label-text text-[10px] uppercase tracking-widest text-secondary font-bold mb-1">Make</label>
+<select class="bg-transparent border-none focus:ring-0 font-headline font-bold text-lg p-0 cursor-pointer">
+<option>Ducati</option>
+<option>BMW Motorrad</option>
+<option>Yamaha</option>
+</select>
+</div>
+<div class="flex flex-col px-4 py-2 border-l border-surface-variant">
+<label class="label-text text-[10px] uppercase tracking-widest text-secondary font-bold mb-1">Model</label>
+<select class="bg-transparent border-none focus:ring-0 font-headline font-bold text-lg p-0 cursor-pointer">
+<option>Panigale V4 S</option>
+<option>S1000RR</option>
+<option>YZF-R1</option>
+</select>
+</div>
+<div class="flex flex-col px-4 py-2 border-l border-surface-variant">
+<label class="label-text text-[10px] uppercase tracking-widest text-secondary font-bold mb-1">Submodel</label>
+<select class="bg-transparent border-none focus:ring-0 font-headline font-bold text-lg p-0 cursor-pointer">
+<option>Standard</option>
+<option>Racing</option>
+</select>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container headline font-bold uppercase tracking-widest py-4 px-6 transition-transform active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">search</span>
+                        Identify Parts
+                    </button>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<div class="max-w-screen-2xl mx-auto px-6 mt-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Sidebar Categories -->
+<aside class="lg:col-span-3 space-y-8">
+<div>
+<h3 class="font-headline font-bold uppercase text-sm tracking-widest mb-6 border-b-2 border-primary pb-2 inline-block">Categories</h3>
+<ul class="space-y-4">
+<li>
+<a class="group flex items-center justify-between text-on-surface hover:text-primary transition-colors" href="#">
+<span class="font-body italic text-xl">Exhaust Systems</span>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-on-surface hover:text-primary transition-colors" href="#">
+<span class="font-body italic text-xl">Chassis &amp; Body</span>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-on-surface hover:text-primary transition-colors" href="#">
+<span class="font-body italic text-xl">Engine Internals</span>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-on-surface hover:text-primary transition-colors" href="#">
+<span class="font-body italic text-xl">Electrical Components</span>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-on-surface hover:text-primary transition-colors" href="#">
+<span class="font-body italic text-xl">Racing Gear</span>
+<span class="material-symbols-outlined text-sm opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container-high p-6">
+<h4 class="font-headline font-black uppercase text-xs tracking-widest text-primary mb-2">Technical Support</h4>
+<p class="font-body text-sm italic mb-4">Our master fabricators are available for custom consultations on your build.</p>
+<a class="label-text uppercase text-[10px] font-bold border-b border-on-surface-variant tracking-widest pb-1" href="#">Contact Engineers</a>
+</div>
+</aside>
+<!-- Product Grid -->
+<section class="lg:col-span-9">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<article class="group bg-surface-container-low flex flex-col relative overflow-hidden transition-all duration-300">
+<div class="aspect-square bg-surface-variant relative overflow-hidden">
+<img alt="Titanium Exhaust System" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Close-up of a high-end titanium motorcycle exhaust pipe with blue heat-treated welds and brushed metallic finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxBGwazv1XNcAV2FKXhMw3pD3ShZhHyr6M63UAU2P5kaGVu73kRGvhyoNzhtYo1vWYIqrU-SO56vCLy4vqCiTNxAE5U_0EHqIFdBbA7b5WWwwUDnLIS_pEs7-Ll57xfV2BkOd5OCqCeGwJLt_GjNUtfg_IQtEMrBD1SDKRYxMO30nwe3ItRuV2cHCCCV9GmKjcXcNFaUytcUmJol9PLbS6fN469LjabsYDaTNDUjVozoVZ1A_aHoqqQcGNXp82O9ENejhhJnThoQ"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary-container px-3 py-1 headline font-bold text-[10px] uppercase tracking-widest">In Stock</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="label-text text-[10px] uppercase tracking-widest text-secondary font-bold mb-2">Exhaust</span>
+<h3 class="font-headline font-bold text-xl uppercase tracking-tight mb-2">Full Titanium Race System</h3>
+<p class="font-body italic text-on-surface-variant text-sm mb-4 line-clamp-2">Ultra-lightweight titanium alloy with precision hand-welded seams for maximum gas flow efficiency.</p>
+<div class="mt-auto pt-6 border-t border-surface-variant">
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="label-text text-[10px] uppercase text-secondary font-medium">Compatibility</p>
+<p class="font-headline font-bold text-xs uppercase">Ducati Panigale V4 / V4S</p>
+</div>
+<p class="font-headline font-black text-2xl text-primary">$3,499.00</p>
+</div>
+<button class="w-full py-4 bg-surface-container-highest text-on-surface headline font-bold uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                    Add To Cart
+                                </button>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="group bg-surface-container-low flex flex-col relative overflow-hidden transition-all duration-300">
+<div class="aspect-square bg-surface-variant relative overflow-hidden">
+<img alt="Forged Piston Set" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Studio photograph of a precision-engineered forged aluminum piston on a dark slate background with industrial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm7q7AzZSSiC7BET4QTPeU2HjBX6If2K8IIJM3OqcBhsfPvXChi6fx-jeI3F5Kg8BG0xItZu8xHLvD7VWQWTD2MdOiJFDSVAHfdi6Nn2mv9bu7vhyr7KS_2SgcN43gJJr5hMcIIXR77ET6iok0tuEdaMM0zxzf36gV8YzMmxyBCgRKd0Gwi6jpv3G5VSVYyJY3b7rgJwCr1trAvZAipP9QKH-Jhcah0yhKZKLhFUWR73g-UwYZy0e9rSPdsnfFXk4Dye16Kx7yJA"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="label-text text-[10px] uppercase tracking-widest text-secondary font-bold mb-2">Engine</span>
+<h3 class="font-headline font-bold text-xl uppercase tracking-tight mb-2">ETD-X Forged Piston Kit</h3>
+<p class="font-body italic text-on-surface-variant text-sm mb-4 line-clamp-2">CNC machined from aerospace-grade 7075 aluminum. Optimized for high-compression racing applications.</p>
+<div class="mt-auto pt-6 border-t border-surface-variant">
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="label-text text-[10px] uppercase text-secondary font-medium">Compatibility</p>
+<p class="font-headline font-bold text-xs uppercase">S1000RR / M1000RR</p>
+</div>
+<p class="font-headline font-black text-2xl text-primary">$850.00</p>
+</div>
+<button class="w-full py-4 bg-surface-container-highest text-on-surface headline font-bold uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                    Add To Cart
+                                </button>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="group bg-surface-container-low flex flex-col relative overflow-hidden transition-all duration-300">
+<div class="aspect-square bg-surface-variant relative overflow-hidden">
+<img alt="Carbon Fiber Fairings" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Woven carbon fiber motorcycle fairing texture with deep glossy finish and sharp aerodynamic edges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALb27d8VILLIwFKw5wJ3mXBs_gKBEOM9-OzEZtg5duO9pDfVCec1yGETlUP1TyyYNyQvo6sJ4INhFnbYDqcHl944LPgfVlZKLsjK0KP-WIT72cyCaxEgx8Sh1DegkM2TWQeqTgUH1QK51pff1iki0DPHPbjqdwR-hfSOJgFy9zEKyH4ziMpUZptDvYAKoWj3-UCYFQByN06_TCngZ1sEjrlP-OKyWAXPraT4cG8KaSry2UhW5lY3kAQvBZ1asEMVddyoD125J9tA"/>
+<div class="absolute top-4 left-4 bg-on-surface text-surface px-3 py-1 headline font-bold text-[10px] uppercase tracking-widest">Limited Edition</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="label-text text-[10px] uppercase tracking-widest text-secondary font-bold mb-2">Chassis</span>
+<h3 class="font-headline font-bold text-xl uppercase tracking-tight mb-2">Aero-Carbon Body Kit</h3>
+<p class="font-body italic text-on-surface-variant text-sm mb-4 line-clamp-2">Autoclave-cured pre-preg carbon fiber. Significant weight reduction with superior structural rigidity.</p>
+<div class="mt-auto pt-6 border-t border-surface-variant">
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="label-text text-[10px] uppercase text-secondary font-medium">Compatibility</p>
+<p class="font-headline font-bold text-xs uppercase">Yamaha YZF-R1 (15-24)</p>
+</div>
+<p class="font-headline font-black text-2xl text-primary">$2,150.00</p>
+</div>
+<button class="w-full py-4 bg-surface-container-highest text-on-surface headline font-bold uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                    Add To Cart
+                                </button>
+</div>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="group bg-surface-container-low flex flex-col relative overflow-hidden transition-all duration-300">
+<div class="aspect-square bg-surface-variant relative overflow-hidden">
+<img alt="Braking System" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Macro photo of a high-performance motorcycle brake caliper with copper-colored pistons and braided steel lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPIjItZLvv8Y-QPN2ulfNVXXLkCRXrn4HCuJu4zlICOHGXpL0pFwtzM0QLT0jNx0jQKpdfAze971LI8eVgEnURVI4g24YjVNsh8Aw35BcGm5i332alOGlbCEZ4GBaLD-ln7nXKQkq6AX81co70R-BbFEzqy3W2C9dq4m-qF8B62a9FINGxiODxLNAAuKbzXKvMpmE9DNZYs2JoI4uCCww2CjsNWw1Zg8BpiTlwSjSsyySRqU1vTmMKqOCO7ah7s4CN-J9hLobGJQ"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="label-text text-[10px] uppercase tracking-widest text-secondary font-bold mb-2">Braking</span>
+<h3 class="font-headline font-bold text-xl uppercase tracking-tight mb-2">Mono-Block Caliper Set</h3>
+<p class="font-body italic text-on-surface-variant text-sm mb-4 line-clamp-2">Forged mono-block construction for zero flex and consistent braking performance under extreme heat.</p>
+<div class="mt-auto pt-6 border-t border-surface-variant">
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="label-text text-[10px] uppercase text-secondary font-medium">Compatibility</p>
+<p class="font-headline font-bold text-xs uppercase">Universal Race Fitment</p>
+</div>
+<p class="font-headline font-black text-2xl text-primary">$1,200.00</p>
+</div>
+<button class="w-full py-4 bg-surface-container-highest text-on-surface headline font-bold uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                    Add To Cart
+                                </button>
+</div>
+</div>
+</article>
+<!-- Product Card 5 -->
+<article class="group bg-surface-container-low flex flex-col relative overflow-hidden transition-all duration-300">
+<div class="aspect-square bg-surface-variant relative overflow-hidden">
+<img alt="Suspension Fork" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Sleek golden-coated motorcycle front suspension forks with intricate adjustment dials and mechanical detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuJcEHS89VDu_KFuisSdY7ZybAD3_V75Yyi8hiRcIeOejqEMYcKCGRpIk0ct3KyBGe6mBc1vRk5uazHztP2606022u6HgRtHQwQ3KCtLfHv11gTb5HiVQftPIQlJ3xHL7gdUs5V6HOOuxMEskip2jI943fghmVNSTxWN1pnNonLu882oRtNa-3WU_S_c1S7_hEYo53D_0VmCC4KWn9Bswwj2tr7496AFRrwzw5QzFL1UmxysnW6NkFQNZkH7Zl7ETnDe4iOvttig"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="label-text text-[10px] uppercase tracking-widest text-secondary font-bold mb-2">Chassis</span>
+<h3 class="font-headline font-bold text-xl uppercase tracking-tight mb-2">Oversize Steering Damper</h3>
+<p class="font-body italic text-on-surface-variant text-sm mb-4 line-clamp-2">Hydraulic stabilization for high-speed tracking. 24-click adjustment range for precise tuning.</p>
+<div class="mt-auto pt-6 border-t border-surface-variant">
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="label-text text-[10px] uppercase text-secondary font-medium">Compatibility</p>
+<p class="font-headline font-bold text-xs uppercase">ZX-10R / RR (21-24)</p>
+</div>
+<p class="font-headline font-black text-2xl text-primary">$595.00</p>
+</div>
+<button class="w-full py-4 bg-surface-container-highest text-on-surface headline font-bold uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                    Add To Cart
+                                </button>
+</div>
+</div>
+</article>
+<!-- Product Card 6 -->
+<article class="group bg-surface-container-low flex flex-col relative overflow-hidden transition-all duration-300">
+<div class="aspect-square bg-surface-variant relative overflow-hidden">
+<img alt="Race Dash" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Electronic motorcycle instrument cluster glowing with digital telemetry data in a dark garage environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN8fKqDRAWwElnlpv130d0f1fsQWJl1f6t1MkYPscF9DPu9aJkgVI-Jm-WUQSmhDsTqZ0jpdu2tpHzTOMQfvoGW_mFkZDaH1VNxHfYmlHxFRuSW4HjfnADSCiu12ghvUbuDWw3cSyBX_UxTX6QRU3VZd_Dlo-DprdKbM_TCwCqXQWs_RzP9UQ5xnhH-JrD08sAlw1xW0KIXPuHAOD3hN3mtF5TVlMU_sfIMsHkInIJGjO6NrAkzgWdTHbKeazCkE1PnDylcdOdFQ"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="label-text text-[10px] uppercase tracking-widest text-secondary font-bold mb-2">Electrical</span>
+<h3 class="font-headline font-bold text-xl uppercase tracking-tight mb-2">Master-Spec Datalogger</h3>
+<p class="font-body italic text-on-surface-variant text-sm mb-4 line-clamp-2">Integrated GPS telemetry with 10Hz sampling rate. Real-time engine health and lap analysis.</p>
+<div class="mt-auto pt-6 border-t border-surface-variant">
+<div class="flex justify-between items-end mb-4">
+<div>
+<p class="label-text text-[10px] uppercase text-secondary font-medium">Compatibility</p>
+<p class="font-headline font-bold text-xs uppercase">CAN-Bus Universal</p>
+</div>
+<p class="font-headline font-black text-2xl text-primary">$1,850.00</p>
+</div>
+<button class="w-full py-4 bg-surface-container-highest text-on-surface headline font-bold uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                                    Add To Cart
+                                </button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex items-center justify-between border-t-2 border-surface-container-highest pt-8">
+<p class="label-text text-[10px] uppercase tracking-widest text-secondary">Showing 6 of 142 Components</p>
+<div class="flex gap-4">
+<button class="w-12 h-12 flex items-center justify-center border border-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center bg-on-surface text-surface headline font-bold">1</button>
+<button class="w-12 h-12 flex items-center justify-center border border-surface-variant hover:bg-surface-container-high transition-colors headline font-bold">2</button>
+<button class="w-12 h-12 flex items-center justify-center border border-surface-variant hover:bg-surface-container-high transition-colors headline font-bold">3</button>
+<button class="w-12 h-12 flex items-center justify-center border border-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-slate-100 dark:bg-slate-950">
+<div class="bg-slate-200 dark:bg-slate-800 h-px w-full my-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<h2 class="font-['Space_Grotesk'] font-black uppercase text-slate-800 dark:text-slate-200 text-xl">Ed Toomey Designs</h2>
+<p class="font-['Newsreader'] italic text-slate-500 dark:text-slate-400">Engineering the interface between man and machine with unrelenting precision.</p>
+</div>
+<div>
+<h4 class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-[#874d30] dark:text-[#a46546] mb-6 font-bold">Products</h4>
+<ul class="space-y-3">
+<li><a class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200" href="#">Exhaust Systems</a></li>
+<li><a class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200" href="#">Chassis Components</a></li>
+<li><a class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200" href="#">Engine Parts</a></li>
+<li><a class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200" href="#">Braking</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-[#874d30] dark:text-[#a46546] mb-6 font-bold">Company</h4>
+<ul class="space-y-3">
+<li><a class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200" href="#">About Us</a></li>
+<li><a class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200" href="#">Shipping &amp; Returns</a></li>
+<li><a class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-slate-500 dark:text-slate-400 hover:text-[#874d30] transition-colors duration-200" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-[#874d30] dark:text-[#a46546] mb-6 font-bold">Newsletter</h4>
+<div class="flex border-b border-slate-300 dark:border-slate-700 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-xs font-['Space_Grotesk'] w-full" placeholder="blueprint@racing.com" type="email"/>
+<button class="material-symbols-outlined text-[#874d30]">arrow_forward</button>
+</div>
+</div>
+</div>
+<div class="px-8 py-8 max-w-screen-2xl mx-auto border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Newsreader'] italic text-slate-500 text-sm">© 2024 Ed Toomey Designs. Precision in every component.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400">language</span>
+<span class="material-symbols-outlined text-slate-400">shield</span>
+<span class="material-symbols-outlined text-slate-400">verified_user</span>
+</div>
+</div>
+</footer>
+</body></html>
