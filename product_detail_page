@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#ffdbcc",
+                    "on-secondary-fixed-variant": "#3a485b",
+                    "secondary-fixed-dim": "#b9c7df",
+                    "surface-container-high": "#e6e8ea",
+                    "outline-variant": "#d8c2b9",
+                    "on-primary-fixed": "#351000",
+                    "inverse-primary": "#ffb693",
+                    "primary": "#874d30",
+                    "surface-container": "#eceef0",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#d5e3fc",
+                    "surface-variant": "#e0e3e5",
+                    "tertiary-fixed": "#d8e3fb",
+                    "secondary-fixed": "#d5e3fc",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#3c475a",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-container": "#57657a",
+                    "on-error-container": "#93000a",
+                    "surface": "#f7f9fb",
+                    "on-secondary-fixed": "#0d1c2e",
+                    "tertiary-fixed-dim": "#bcc7de",
+                    "surface-bright": "#f7f9fb",
+                    "on-primary-fixed-variant": "#6d381d",
+                    "surface-tint": "#8a4f32",
+                    "primary-fixed-dim": "#ffb693",
+                    "primary-container": "#a46546",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d8dadc",
+                    "secondary": "#515f74",
+                    "surface-container-low": "#f2f4f6",
+                    "on-primary-container": "#fffbff",
+                    "tertiary-container": "#6a758a",
+                    "on-tertiary-fixed": "#111c2d",
+                    "on-surface": "#191c1e",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#fefcff",
+                    "on-surface-variant": "#53443d",
+                    "on-background": "#191c1e",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2d3133",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "background": "#f7f9fb",
+                    "tertiary": "#515c71",
+                    "outline": "#85736c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Newsreader"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-label selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 py-4 max-w-screen-2xl mx-auto w-full">
+<div class="text-xl font-bold font-['Space_Grotesk'] uppercase tracking-tighter text-slate-900 dark:text-slate-50">
+                Ed Toomey Designs
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] uppercase text-xs tracking-widest text-[#874d30] dark:text-[#a46546] border-b-2 border-[#874d30] pb-1" href="#">Shop</a>
+<a class="font-['Space_Grotesk'] uppercase text-xs tracking-widest text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors" href="#">Services</a>
+<a class="font-['Space_Grotesk'] uppercase text-xs tracking-widest text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors" href="#">Account</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="material-symbols-outlined p-2 text-slate-600 hover:bg-slate-100/50 transition-all rounded scale-95 active:scale-90" data-icon="shopping_cart">shopping_cart</button>
+<button class="material-symbols-outlined p-2 text-slate-600 hover:bg-slate-100/50 transition-all rounded scale-95 active:scale-90" data-icon="person">person</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-16 max-w-screen-2xl mx-auto px-6 md:px-12">
+<!-- Breadcrumbs -->
+<nav class="flex gap-2 mb-8 items-center">
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-on-surface-variant">Home</span>
+<span class="material-symbols-outlined text-[12px] text-outline">chevron_right</span>
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-on-surface-variant">Shop</span>
+<span class="material-symbols-outlined text-[12px] text-outline">chevron_right</span>
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-primary">Exhaust Systems</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Gallery Section -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="relative aspect-[4/3] bg-surface-container-low overflow-hidden group">
+<img alt="Titanium Exhaust Detail" class="w-full h-full object-cover" data-alt="Close-up of a high-performance titanium motorcycle exhaust system with rainbow-colored heat staining and precision TIG welds on a dark industrial background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCly6Jh890RdWdPtqgvGxQZ_tjzDiOaeqAQkI2dZjV3cx9uBKMnN_EDvgmREeUMFurGZeB0gSNXWIz_l0pqVtkLUdgTUsyz6zjV9Gd6n7Cu4gprIeHlqvs42w4UfLmmpgh8jN9DzP9FooUoIlxZffi0UNi7QJzV3QaR13fK-dmIuSP4-uZdym0MGqpixv3v_G3QAMUjQaMarH2t5eoJaoOt-5FMyQEAVmTFbtPZLSE1-0Xp17jXC-d7yUmeJtNBicNN8CENI8tJw"/>
+<div class="absolute bottom-6 left-6 flex gap-3">
+<div class="bg-surface-container-lowest/90 px-3 py-1 text-[10px] font-['Space_Grotesk'] uppercase tracking-widest shadow-sm">Main View</div>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square bg-surface-container-low overflow-hidden cursor-pointer hover:opacity-80 transition-opacity border-b-2 border-primary">
+<img class="w-full h-full object-cover" data-alt="Close up detail of high quality TIG welds on a titanium exhaust manifold" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC98Z7vNaeQYjKrqMCuOWmcDljIWdaZYeFn30xxwTF_3c_YPX2_qFd2lbS8tUKr95KMBpEm58kdglkl8P6MHA4UbP3E1-O1Xje9BIaH54SYk5srCDQ7F9ybwqRiFOpGreIC1Bpq78fjkkDsD7wE1whQ6AKTYGh8-RB2AMa8pqKHTeCvM7EaN3a5CMhJDdb8PdHmCCm0_3-uJWZY23op_I6qJTDLhjtbLZRP628LNHUHEZ87sGX5qWJdg0ESbrXe8yFfWunFSMoD6A"/>
+</div>
+<div class="aspect-square bg-surface-container-low overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Technical blueprint view of the full motorcycle exhaust assembly with dimensions and annotations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD6Kxf2DHQl9oEU3pTHilFvOWFEtg3AYDEsRPh3sYWA9lVglMn9tFcLUvmHGFqL36k0GNC4kWuvO_WQAD-CMtNkXLXmPhj1MzXaUBYl8D3c7JElAXTr2_D7-RDd11coI92EDVlPWiJXo8gnKila_GkjKVPk8mh3kXhvIW1eOghpW-44uRkfVdEpfYxA8kglVqeVH0p5vyHnyOrOFR5AkmgiQOLox20OwCFru0IWc_gFps4XADRdn-cn1uuDUvwOoWcZRXiytC6Ww"/>
+</div>
+<div class="aspect-square bg-surface-container-low overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Installed view of the titanium exhaust system on a sleek modern superbike in a clean garage environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7urdoTeOOS4QMOsdz_RW-EBxkUBjUhxYZL0mHcEV2sakx5_EmUqRYD-B5RoWB0Ip6nP-OcWnlV3LjT271ll4NKruRORfj9Us_gbmSuegxvY_x94A7JvT9Gpg5wVkWX1C5hUEwWtK77caWpWzcTOifenneruFg2W7cprBx6oSb7KKg0FlbBHkgaAKMb1Jrd8C0b05iJjqX-3DeOBiCbLMnUPp4xR2az0cIFSmkXlSeOOtxwnU747EOKeELTlUBfVkq6O1w3ap_hg"/>
+</div>
+<div class="aspect-square bg-surface-container-low overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Exhaust outlet showing the perforated core and precision machined titanium end cap" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzV4G7UbM8yGu1bJnWF8ayT5uddrfjF853XHnU5OjFhDuX9fRI-AWf9XAfaF7m41-4QlOq9AhJOCFUlE90DYFL5uPuhdNCop1nS8PhPkgPhtWzPN5-qaswSoV17vPJLauzvFcAUK5d-CV3-rMMK2zMHSc-scMCYVFEoFcHnGr1r_v6ltf3cBu0kOBm2KbWIQ3PL26nbT8oD2EyDH8PTDWJ6K-cJCnd80sKZeQgaZvS_cNzRRsM_dhKlSxFUp4ojUFI4KhDcCPdoA"/>
+</div>
+</div>
+</div>
+<!-- Product Info Section -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<header class="flex flex-col gap-2">
+<div class="flex items-center gap-4">
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-[0.2em] text-primary font-bold">Precision Series 01</span>
+<div class="flex gap-1 text-[#874d30]">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+</div>
+<h1 class="text-5xl font-['Space_Grotesk'] font-bold tracking-tight text-on-surface leading-none">Apex-X Full Titanium Exhaust</h1>
+<p class="font-['Newsreader'] italic text-xl text-on-surface-variant mt-4">Lightweight construction meeting extreme thermal performance. A masterpiece of fabrication for the modern track enthusiast.</p>
+</header>
+<div class="flex flex-col gap-4">
+<div class="text-4xl font-['Space_Grotesk'] font-bold text-on-surface">$2,845.00</div>
+<div class="flex gap-3">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 text-[10px] font-['Space_Grotesk'] uppercase tracking-widest font-bold">In Stock</span>
+<span class="bg-surface-container-highest text-on-surface px-3 py-1 text-[10px] font-['Space_Grotesk'] uppercase tracking-widest font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+                            Ships Same Day
+                        </span>
+</div>
+</div>
+<!-- Add to Cart Flow -->
+<div class="flex flex-col gap-6 pt-6 border-t border-outline-variant/20">
+<div class="flex flex-col gap-2">
+<label class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-on-surface-variant">Select Finish</label>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border-2 border-primary bg-slate-300 ring-offset-2 ring-1 ring-transparent hover:ring-outline transition-all"></button>
+<button class="w-12 h-12 rounded-full border border-outline-variant bg-slate-800 hover:scale-105 transition-transform"></button>
+<button class="w-12 h-12 rounded-full border border-outline-variant bg-[#a46546] hover:scale-105 transition-transform"></button>
+</div>
+</div>
+<div class="flex gap-4 items-end">
+<div class="flex flex-col gap-2 flex-1">
+<label class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-on-surface-variant">Quantity</label>
+<div class="flex items-center h-14 bg-surface-container-highest">
+<button class="w-14 h-full flex items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<input class="w-full h-full bg-transparent border-none text-center font-['Space_Grotesk'] font-bold focus:ring-0" type="text" value="1"/>
+<button class="w-14 h-full flex items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<button class="flex-[2] h-14 bg-gradient-to-r from-primary to-primary-container text-white font-['Space_Grotesk'] uppercase text-xs tracking-widest font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-all active:scale-95 shadow-lg">
+<span class="material-symbols-outlined">shopping_bag</span>
+                            Add To Cart
+                        </button>
+</div>
+</div>
+<!-- Technical Teaser -->
+<div class="flex flex-col gap-4 py-8 px-6 bg-surface-container-low border-t-2 border-primary">
+<h3 class="font-['Space_Grotesk'] uppercase text-xs tracking-[0.2em] font-bold">Key Specifications</h3>
+<ul class="flex flex-col gap-3 font-['Inter'] text-sm text-on-surface-variant">
+<li class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span>Material</span>
+<span class="font-bold text-on-surface">Grade 1 Titanium</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span>Weight Reduction</span>
+<span class="font-bold text-on-surface">-6.4kg (vs. Stock)</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span>Peak Power Gain</span>
+<span class="font-bold text-on-surface">+8.2 HP @ 12,500 RPM</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Detailed Specifications Grid -->
+<section class="mt-32">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-12 gap-8">
+<h2 class="text-4xl font-['Space_Grotesk'] font-bold tracking-tight">Technical Blueprint</h2>
+<div class="h-px bg-outline-variant/20 flex-grow mx-12 hidden md:block"></div>
+<div class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-on-surface-variant whitespace-nowrap">Series: ET-09X-FULL</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="bg-surface-container-low p-8 flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+<h4 class="font-['Space_Grotesk'] font-bold text-xl">Fabrication Process</h4>
+<p class="font-['Newsreader'] italic text-on-surface-variant">Hand-built using TIG welding with argon gas back-purging. Every segment is precision cut to ensure optimal exhaust gas flow velocity and minimal back-pressure.</p>
+</div>
+<div class="bg-surface-container-low p-8 flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">thermostat</span>
+<h4 class="font-['Space_Grotesk'] font-bold text-xl">Thermal Management</h4>
+<p class="font-['Newsreader'] italic text-on-surface-variant">Titanium's unique thermal properties allow for rapid heat dissipation. The header design includes expansion bellows to prevent stress fractures during extreme track use.</p>
+</div>
+<div class="bg-surface-container-low p-8 flex flex-col gap-4">
+<span class="material-symbols-outlined text-primary text-3xl">fitbit</span>
+<h4 class="font-['Space_Grotesk'] font-bold text-xl">Compatibility &amp; Fitment</h4>
+<p class="font-['Newsreader'] italic text-on-surface-variant">Designed specifically for 2021-2024 flagship liter-class motorcycles. Direct bolt-on installation with all necessary brackets and laser-cut hardware included.</p>
+</div>
+</div>
+</section>
+<!-- Customer Reviews -->
+<section class="mt-32">
+<div class="flex flex-col gap-8 mb-12">
+<h2 class="text-4xl font-['Space_Grotesk'] font-bold tracking-tight">Verified Experiences</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<!-- Review 1 -->
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-on-surface-variant">Oct 14, 2023</span>
+</div>
+<h5 class="font-['Space_Grotesk'] font-bold text-lg text-on-surface">Precision at its finest.</h5>
+<p class="font-['Newsreader'] italic text-on-surface-variant leading-relaxed">"The welding on this system is purely art. Installation was effortless—everything aligned perfectly. The sound profile is deep and mechanical without being obnoxious at idle."</p>
+<div class="flex items-center gap-3 mt-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest"></div>
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest font-bold">Marcus R. — Track Day Instructor</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-on-surface-variant">Sep 22, 2023</span>
+</div>
+<h5 class="font-['Space_Grotesk'] font-bold text-lg text-on-surface">Incredible weight savings.</h5>
+<p class="font-['Newsreader'] italic text-on-surface-variant leading-relaxed">"Shaved almost 15lbs off my bike. You can actually feel the difference in side-to-side transitions. The blueing on the titanium after a few heat cycles looks stunning."</p>
+<div class="flex items-center gap-3 mt-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest"></div>
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest font-bold">Liam G. — Amateur Racer</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Parts Bento Grid -->
+<section class="mt-32">
+<h2 class="text-4xl font-['Space_Grotesk'] font-bold tracking-tight mb-12">Engineered Companion Parts</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 min-h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-low group cursor-pointer overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Billet aluminum rearsets with adjustable footpeg positions and carbon fiber heel guards" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhTTmNrk7c_tHoiT_PGfXLjw8iyJiwEie_1JriTWg7qwC4tVa-nMUeQjhXYAxbeIGbq1wwxJqBFArpFX3MT3afkm1QblSlMw0ShaH6MBJMH-blnG-dEUt3fZbrEK2ISFOV5hBI1lrtwdbxUNiRhbEDdDgK72FtgCHldoBupmY3YtzjibndPJOUoTqzW2Rd39_jwFeIXASQXEhE4vtzJtnhX3FVnXPhegKUR5zTYsk3LN_j5kiAGrgsY5wvhbYdnZ3XpqXDLhngsA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent p-8 flex flex-col justify-end">
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-white/70">Control Series</span>
+<h4 class="text-2xl font-['Space_Grotesk'] font-bold text-white">Adjustable Billet Rearsets</h4>
+<p class="text-white/80 font-['Newsreader'] italic text-sm mt-2">Precision machined 7075-T6 aluminum.</p>
+</div>
+</div>
+<div class="bg-surface-container-low group cursor-pointer overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High flow performance air filter with multi-layer cotton gauze and reinforced mesh frame" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_2l6Ur1Gfi9U2Y6fF9gd76NpesIauJh_Dvhp_TFDiUqncjF1JOETrXG9ubF1TVDvC3JfsAI8Sl9rV2HU4lr_PjdN3K5AUnXZAGep4P5q12ftOrhlRW55svbN3IDcLB8I8YUVZfiZ1_xERxL-uMI4cINdJXZLF_CqscWd5-pU79o5XX35pZkqlkcBTJ0S-laSNCqKL41uMxM70jpxPGOClQFNMHJy_isvkCit29d7wwBC2-XnR_BV68d0eAMwY5r6t1eUdcFz2EQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent p-6 flex flex-col justify-end">
+<h4 class="text-lg font-['Space_Grotesk'] font-bold text-white">High-Flow Air Filter</h4>
+</div>
+</div>
+<div class="bg-surface-container-low group cursor-pointer overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Carbon fiber brake cooling ducts for motorcycle front calipers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAAuJlQ3Tfx0-mrn6gbBXT_RGCG_8LIZKSHdSmelf0gOTYgOwFkpdhzGSJt2LbrJFH_EkTzHDR4Iucxh4AXISoKk5w1WIByG7SoFz3h3LkZWls3zJ82PakBQ-25fDxWmHMP1QEas3UIWcVWZ4Ha1yuxNslvoxdVyD1XNTa8WSYl4k6413k5ULhJy6EITSxzy9SKdISR3r8LcB2ifs8bHA1rHoo8swoyVv57VIx9Z1ymojdsh6U5lzHeHRBviY-QIUhd34qRPReAQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent p-6 flex flex-col justify-end">
+<h4 class="text-lg font-['Space_Grotesk'] font-bold text-white">Carbon Brake Ducts</h4>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-container-low group cursor-pointer overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Digital motorcycle engine management system or ECU with wiring harness on a clean white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzchngXXDbNlPx_ESHVpXTjmGjpUmTFjey0TBrwoToQTnG-N3cLdk0xnGnkWdh2_N8AJT_Za_3UuGa-T1aaiwebfyeJeoSpkzIuEvqZsJAcPp91yHH9mduHRG3006qYgKFbfGSCGotVbI3tW4B2V2A6TCBukkjTDdn9OHHRXGrQrIyVTgtcgKGLanI3_1fB3GJVZH2Z_gtl3jZ6J5IOO6jPjhOhmAwLTbqBlL_6TxUdORdZIduKHl3PQ6xlAw2bJM-pdyRTXSIDQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent p-8 flex flex-col justify-end">
+<h4 class="text-2xl font-['Space_Grotesk'] font-bold text-white">Stage 2 Performance Mapping</h4>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-slate-100 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="font-['Space_Grotesk'] font-black uppercase text-slate-800 dark:text-slate-200 text-2xl tracking-tighter">Ed Toomey Designs</div>
+<p class="font-['Newsreader'] italic text-slate-500 dark:text-slate-400">Engineering excellence for the discerning rider. Every component is a testament to the pursuit of speed and aesthetic perfection.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-[#874d30] font-bold">Catalog</span>
+<ul class="flex flex-col gap-2 font-['Space_Grotesk'] text-xs tracking-wide">
+<li><a class="text-slate-500 hover:text-[#874d30] transition-colors" href="#">Exhaust Systems</a></li>
+<li><a class="text-slate-500 hover:text-[#874d30] transition-colors" href="#">Chassis Components</a></li>
+<li><a class="text-slate-500 hover:text-[#874d30] transition-colors" href="#">Engine Parts</a></li>
+<li><a class="text-slate-500 hover:text-[#874d30] transition-colors" href="#">Braking</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-[#874d30] font-bold">Support</span>
+<ul class="flex flex-col gap-2 font-['Space_Grotesk'] text-xs tracking-wide">
+<li><a class="text-slate-500 hover:text-[#874d30] transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-slate-500 hover:text-[#874d30] transition-colors" href="#">Contact</a></li>
+<li><a class="text-slate-500 hover:text-[#874d30] transition-colors" href="#">Warranty</a></li>
+<li><a class="text-slate-500 hover:text-[#874d30] transition-colors" href="#">Technical Guides</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest text-[#874d30] font-bold">Newsletter</span>
+<p class="font-['Newsreader'] italic text-sm text-slate-500">Join our engineering inner circle for early access to new development.</p>
+<div class="flex bg-slate-200 dark:bg-slate-800 p-1">
+<input class="bg-transparent border-none w-full text-xs font-['Space_Grotesk'] focus:ring-0" placeholder="Email" type="email"/>
+<button class="bg-[#874d30] text-white px-4 py-2 font-['Space_Grotesk'] uppercase text-[10px] tracking-widest">Join</button>
+</div>
+</div>
+</div>
+<div class="bg-slate-200 dark:bg-slate-800 h-px w-full max-w-screen-2xl mx-auto"></div>
+<div class="max-w-screen-2xl mx-auto px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-['Newsreader'] italic text-xs text-slate-500">© 2024 Ed Toomey Designs. Precision in every component.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors">social_leaderboard</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors">share_reviews</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors">linked_camera</span>
+</div>
+</div>
+</footer>
+</body></html>
